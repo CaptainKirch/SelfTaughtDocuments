@@ -117,7 +117,6 @@ Projects
 Advanced AI quant finance applications.
 
 
-
 5. "Whats your study habits? Whats your routine? Are you doing this while working?"
 
 
