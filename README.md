@@ -28,15 +28,15 @@ Now usually after I share that first introduction, people have many questions, s
 
 4. "What Is your learnig pathway? What courses and education are you taking?"
 
-- I am gonna share with you my entire first year learning pathway, ignore the timelines on it, those are simply goals. Also I want to give a disclaimer, this is ALL I am doing, I am not working a job, I have 2-3 freelance clients paying my bills and I am spending ALL day and waking hours 6-7 days a week doing this (minding my mental bandwidth and not causing burn out ofcourse), so this syllabus will seem bold but truthfully I am already almost 30 days into this and I am able to solve 6KYU CodeWars problems somewhat consistently as well as can write basic programming scripts with Python mini projects. In addition, I have taken "Cal Newports - Deep Work" book to exterme heart and have delete all social media and when I am doing deep work thats all I do, I sit and focus 100% energy for averaging around 4-5 hours per day. But I will get into my study habits in the next question below under this syllabus.
+- I am gonna share with you my entire first year learning pathway, ignore the timelines on it, those are simply goals. Also I want to give a disclaimer, this is ALL I am doing, I am not working a job, I have 2-3 freelance clients paying my bills and I am spending ALL day and waking hours 6-7 days a week doing this (minding my mental bandwidth and not causing burn out ofcourse), so this syllabus will seem bold but truthfully I am already almost 30 days into this and I am able to solve 6KYU CodeWars problems somewhat consistently as well as can write basic programming scripts with Python mini projects. In addition, I have taken "Cal Newports - Deep Work" book to exterme heart and have delete all social media and when I am doing deep work thats all I do, I sit and focus 100% energy for averaging around 4-5 hours per day. But I will get into my study habits in the future and share them with you down the line maybe.
 
-Structured Learning Plan for Programming, Math, and AI Quant Finance
 
 📌 Objective:
 
 Master Python, C++, and foundational mathematics.
 Develop strong algorithmic thinking and problem-solving skills.
 Build AI and quantitative finance-related projects.
+
 📅 March 2025: Python Foundations & C++ Basics Start
 Python Fundamentals
 Core Syntax: Variables, Data Types, Control Structures, Functions.
@@ -47,6 +47,8 @@ Mathematics
 Complete Pre-Algebra and transition into Algebra 1.
 Problem-Solving & Competitive Programming
 Introduction to core problem-solving strategies.
+
+
 📅 April 2025: NumPy, Pandas & Continue C++
 Data Science Basics
 NumPy & Pandas: Arrays, DataFrames, Data Manipulation.
@@ -56,6 +58,8 @@ Mathematics
 Algebra 1: Equations, Graphing Linear Equations.
 Problem-Solving
 Algorithmic thinking exercises.
+
+
 📅 May 2025: Advanced Python & Pre-Calculus Start
 Data Structures & Algorithms (DSA)
 Arrays, Hashmaps, Stacks, Queues.
@@ -66,6 +70,8 @@ Mathematics
 Start Pre-Calculus (Functions, Polynomials, Rational Expressions).
 LeetCode Practice
 Solve 50+ Python problems focusing on patterns.
+
+
 📅 June 2025: Data Visualization & C++ OOP Concepts
 Data Science Visualization
 Matplotlib, Seaborn: Data visualization techniques.
@@ -75,6 +81,8 @@ Mathematics
 Complete Pre-Calculus and transition into Calculus 1.
 LeetCode Practice
 Continue algorithm challenges.
+
+
 📅 July 2025: Data Cleaning & Calculus 1 Start
 Data Cleaning & Preprocessing
 Handling missing data, feature engineering.
@@ -84,6 +92,8 @@ Mathematics
 Start Calculus 1 (Limits, Derivatives).
 Coding Challenges
 Solve 50 C++ and 50 Python problems.
+
+
 📅 August 2025: Algorithms & Data Structures Start
 Algorithms & Data Structures
 Arrays, Strings, Two Pointers, Sliding Window techniques.
@@ -93,6 +103,8 @@ Mathematics
 Continue Calculus 1 (Graph Analysis, Applications of Derivatives).
 Competitive Programming
 Start Codeforces and AtCoder.
+
+
 📅 September 2025: Continue Algorithms & Start Calculus 2
 Advanced Algorithms
 Linked Lists, Trees, Graphs.
@@ -102,6 +114,8 @@ Competitive Programming
 Solve beginner-level challenges.
 Project Work
 Begin work on real-world AI/finance projects.
+
+
 📅 October - December 2025: Mastering Advanced Topics
 Finalizing Algorithms & Data Structures
 Complete LeetCode Medium problems.
@@ -115,12 +129,3 @@ Smart Contracts & Solidity
 Intro to Ethereum development.
 Projects
 Advanced AI quant finance applications.
-
-
-5. "Whats your study habits? Whats your routine? Are you doing this while working?"
-
-
-
-6. "Is anyone helping you? Or do you have a tutor or teacher right now?"
-
-
