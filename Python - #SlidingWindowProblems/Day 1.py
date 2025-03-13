@@ -85,3 +85,78 @@ print(character_replacement("ABAB", 2))  # Output: 4 ("ABAB" or "BABA")
 print(character_replacement("AAAA", 2))  # Output: 4 ("AAAA")
 print(character_replacement("AABAA", 1))  # Output: 5 ("AABAA")
 print(character_replacement("ABCD", 1))  # Output: 2 ("AA" or "BB", etc.)
+
+
+
+#Questions Number 4 -- Problem: Given two strings s1 and s2, check if any permutation of s1 exists in s2.
+
+# PC -- 
+# 1. Use character counts for s1.
+# 2. Maintain a window of size len(s1) in s2.
+# 3. If window count match s1 count, return True.
+# 4. Otherwise, slide window.
+
+from collections import Counter
+
+def check_inclusion(s1, s2):
+    s1_count = Counter(s1)
+    window_count = Counter(s2[:len(s1)])
+
+    if s1_count == window_count:
+        return True
+    
+    for i in range(len(s1), len(s2)):
+        window_count[s2[i]] += 1
+        window_count[s2[i - len(s1)]] -= 1
+
+        if window_count[s2[i - len(s1)]] == 0:
+            del window_count[s2[i - len(s1)]]
+        if window_count == s1_count:
+            return True
+    return False
+
+print(check_inclusion("ab", "eidbaooo"))  # Output: True ("ba" is in "eidbaooo")
+print(check_inclusion("ab", "eidboaoo"))  # Output: False (no "ab" permutation)
+print(check_inclusion("adc", "dcda"))  # Output: True ("cda" is a permutation)
+print(check_inclusion("hello", "ooolleoooleh"))  # Output: False
+
+
+
+#Questions Number 5 --  Problem: Find the smallest substring in "s" that contains all characters of "t".
+
+# PC -- 
+# 1. Use two pointers (left, right)
+# 2. Track character frequencies.
+# 3. Expand right to include t's characters.
+# 3. Once valid, shrink left while maintaining validity.
+# 4. Otherwise, slide window.
+
+from collections import Counter
+
+def min_window(s, t):
+    if not t or not s:
+        return ""
+
+    t_count = Counter(t)
+    window_count = {}
+    left, min_length = 0, float("inf")
+    result = ""
+
+    for right, char in enumerate(s):
+        window_count[char] = window_count.get(char, 0) + 1
+
+        while all(window_count.get(c, 0) >= t_count[c] for c in t_count):
+            if right - left + 1 < min_length:
+                min_length = right - left + 1
+                result = s[left:right+1]
+            window_count[s[left]] -= 1
+            left += 1
+
+    return result
+
+print(min_window("ADOBECODEBANC", "ABC"))  # Output: "BANC"
+print(min_window("a", "a"))  # Output: "a"
+print(min_window("a", "aa"))  # Output: "" (not possible)
+print(min_window("aab", "ab"))  # Output: "ab"
+
+
