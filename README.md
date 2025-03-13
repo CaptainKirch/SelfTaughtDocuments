@@ -17,10 +17,16 @@ Now usually after I share that first introduction, people have many questions, s
 - My final "reason" that I have for doing this is where I see the world going come 10-20 years. Now this is just a guess, but I really like "Cal Newports" thinking of this in his book "Deep Work" where he talks about in the future there will only be 3 types of people ( I am gonna butcher this description but bare with me, and look it up if you can he write it well). "People who work for the machines, people who work with the machines, and people who invest and own the machines." I want to work with the machines and invest and own the machines.... thats what I would enjoy.
 
 2. "Whats Your Background In Coding and Math?" 
-
+- Now this answer will cause most people to go "You are crazy, and this is a bold goal." The truth is, I have zero prior knowledge of computer science, programming, coding etc. I am however computer literate and know my way around tech to a certain degree, I am not an idiot with tech lol.
+- Math on the other hand... I have failed math classes my entire life, and ending highschool with a 70% grade level in math and then doing ZERO math classes in college until now. The tough part is in order to be really good at Quantative Finance and AI Development and overall programming, math skill is KEY and a massive skill gap between an average programming and a good one comes from problem solving and math skills from what I have learnt. So I am gonna need to start from the very ground level, yes I mean Pre Algebra level.
 
 
 3. "Isn't it gonna be hard? or near impossible to learn all that?"
+
+
+
+
+
 
 
 
