@@ -14,7 +14,7 @@ Now usually after I share that first introduction, people have many questions, s
 
 - My main mission with doing this is I want to TRY something else, a new subject, a new industry, a new route, and hell maybe I am actually really talented at it and it was my long lost skill or I suck and I go back on course of what I was doing before all this and walk away with some skills. I see this as a win win situation.
 
-- My final "reason" that I have for doing this is where I see the world going come 10-20 years. Now this is just a guess, but I really like "Cal Newports" thinking of this in his book "Deep Work" where he talks about in the future there will only be 3 types of people, people who work for the machines, people who work with the machines, and people who invest and own the machines. I want to work with the machines and invest and own the machines.... thats what I would enjoy.
+- My final "reason" that I have for doing this is where I see the world going come 10-20 years. Now this is just a guess, but I really like "Cal Newports" thinking of this in his book "Deep Work" where he talks about in the future there will only be 3 types of people ( I am gonna butcher this description but bare with me, and look it up if you can he write it well). "People who work for the machines, people who work with the machines, and people who invest and own the machines." I want to work with the machines and invest and own the machines.... thats what I would enjoy.
 
 2. "Whats Your Background In Coding and Math?" 
 
