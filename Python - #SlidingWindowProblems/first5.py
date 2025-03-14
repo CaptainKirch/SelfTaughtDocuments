@@ -84,14 +84,4 @@
 
 # print(max_subarray_sum([2, 1, 5, 1, 3, 2], 3))  # Output: 9  (subarray [5,1,3])
 # print(max_subarray_sum([1, 9, 3, 7, 2], 2))  # Output: 10 (subarray [3,7])
-# print(max_subarray_sum([-2, -1, -3, -4, -1, -2], 2))  # Output: -1 (subarray [-1, -1])
-
-
-
-# Problem: Given an array of integers nums and an integer k, find the maximum sum of any contiguous subarray of size k.
-
-# The question is asking to find the maximum sum in the array of maximum size subarray size based on "k".
-
-
-
-
+# print(max_subarray_sum([-2, -1, -3, -4, -1, -2], 2))  # Output: -1 (subarray [-1, -1]).
