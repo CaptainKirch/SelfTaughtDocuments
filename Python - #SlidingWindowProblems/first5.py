@@ -1,4 +1,4 @@
-# Day 1 - Sliding Window Problems Challenge Questions
+# Day 1 - Sliding Window Problems Challenge Questions - Pseduo Code Writing Practice
 
 #---------------------------------------------------------------------------
 
@@ -62,27 +62,35 @@
 
 #---------------------------------------------------------------------------
 
-# #Problem 5 --  Problem:
-# You are given a list of fruits, where each fruit is represented by an integer. You can carry at most 2 types of fruits at a time. Find the maximum number of fruits you can pick up in a row.
+# Day 1 - Sliding Window Problems Challenge Questions - Writing Syntax Answers
 
-# Step 1:
-# Unknown
-# Step 2:
-# Unkown
+# Problem: Given an array of integers nums and an integer k, find the maximum sum of any contiguous subarray of size k.
 
 
+# def max_subarray_sum(nums, k):
+
+# # Step 1 - Find the SUM of index 0 - K
+#     window_sum = sum(nums[:k])
+#     main_sum = window_sum
+
+#     for i in range(k, len(nums)): # Step 2 - Create a for loop over the list starting at K for the entire rest of the range of the list.
+#         window_sum += nums[i] - nums[i -k]
+#         main_sum = max(main_sum, window_sum)
+#         # Step 3 - Slide the window to subtracting and adding new iterables into the window each slide.
+
+#     #Step 4 - Once the maxmimum sum is found, divide it by k.
+
+#     return main_sum
+
+# print(max_subarray_sum([2, 1, 5, 1, 3, 2], 3))  # Output: 9  (subarray [5,1,3])
+# print(max_subarray_sum([1, 9, 3, 7, 2], 2))  # Output: 10 (subarray [3,7])
+# print(max_subarray_sum([-2, -1, -3, -4, -1, -2], 2))  # Output: -1 (subarray [-1, -1])
 
 
 
+# Problem: Given an array of integers nums and an integer k, find the maximum sum of any contiguous subarray of size k.
 
-
-
-
-
-
-
-
-
+# The question is asking to find the maximum sum in the array of maximum size subarray size based on "k".
 
 
 
