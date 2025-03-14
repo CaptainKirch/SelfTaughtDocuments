@@ -101,7 +101,7 @@ Deep Learning Models
 Time-Series Forecasting, NLP.
 Mathematics
 Continue Calculus 1 (Graph Analysis, Applications of Derivatives).
-Competitive Programming
+Competitive Progrmming
 Start Codeforces and AtCoder.
 
 
@@ -129,3 +129,13 @@ Smart Contracts & Solidity
 Intro to Ethereum development.
 Projects
 Advanced AI quant finance applications.
+
+
+5. "What are your studying habits and routine like to learn all this? Is it even possible to learn all this in a year?"
+- When I was in middle school and in high school and for college for that matter I never took stuudying seriously, truthfully I never took learning as a whole seriously. This year so far I have dedicated a lot of effort to figuring out how I learn best and how I study best. I took me about 30 days of screwing up and studying and learning inefficently to finally understand what works and does not work for me....now this may not work for everyone, so don't take this literally. 
+
+My entire mindset shifted after I read the book "Deep Work" by Cal Newport, I have referenced the book twice now in this long breakdown because it played a massive part in how I think now about basically everything. So over the past 30 days, I have quit social media, I deleted all apps off my phone, I turned off all notifications everywhere, and I put all devices on DND(do not disturb), 24 hours a day. After this what I did was I selected 4 and times 5 hours every day to focus 100% of my effort towards learning, studying, and deep work. I don't do anything else but learning during those hours, no news, no SMS, no emails, nothing.... just me and learning. 
+
+And truthfully thats it... lol. I have not done any "hacks" I legit just sat down at my desk, deleted every distraction and actually focused, and its amazing how much you can actually get done when you do this. I make the joke of "I bored myself into productivity."
+
+Now ontop of this, I do daily flash cards to improve retention, I also have KPIs for myself that I set weekly on what I want to complete for exercises and practice coding and math etc.. but overall the largest lever is just not getting distracted and cutting over 100% everything and getting to work.
