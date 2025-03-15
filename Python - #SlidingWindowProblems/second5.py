@@ -108,6 +108,52 @@
 # print(min_sum_subarray([10, 20, 30, 40, 50], 3))  # Output: 60 (subarray [10,20,30])
 
 
+# ---- PSEDUOCODE PRACTICE --------
+
+#----------P1
+
+# 1. First thing you want to do is declare variables for window_sum and max_sum, and solve the sum of "K".
+
+# 2. Next you want to do a for loop with "i" and in the range of "k" and the entire len of the array, because you already know the sum of "k" so you might as well start the for loop at "k".
+
+#3. Next you are gonna want to create the sliding window which would make "window_sum" variable equal to the array "i" minus the array "i" - "k" which basically is subtracting off each int that is being taken off the sliding window each time it loops.
+
+#4. Next you want to find the MAX sum of both max_sum and window_sum, so you do an equation for that.
+
+#5 Return max sum to the function.
+
+#----------P2
+
+#1. To begin with we want to declare some variables, for example we want to declare left at 0, current_sum = 0, and min_length = float("inf").
+
+#2. We are going to create a for loop with "right" iterating over the array and it will be doing it for the entire length of the array.
+
+#3. Inside the for loop we want to add the current sum to the window_sum.
+
+#4. We create a for loop that is inside the if statement that moves the sliding window, which is calculating that if the current sum is less than 5 we continue the sliding window and if we reach a window where it is larger we assign it.
+
+#----------P3 -- Share answer, I dont know this one.
+
+
+
+# ---------P4
+
+#1. We are gonna start off by declaring variables and finding the current sum of K, which is the current window sum and assigning that to a variable of min_sum.
+
+#2. After that we want to create a for loop that goes through the entire array and length but starts at the range of "k". 
+
+#3. Inside the for loop we want to create a sliding window with the variable window_sum, which would be window_sum = nums[i] - nums[i - k].
+
+#4. After we do the sliding window we then want to figure out the min of the values of window sum and min sum.
+
+
+#5. After that we want to retunr the min sum to the function.
+
+
+# ---------P5
+
+
+
 
 
 
