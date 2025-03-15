@@ -41,41 +41,52 @@
 
 # Return min_length if valid subarray was found, otherwise return 0.
 
-def min_subarray_length(nums, S):
+# def min_subarray_length(nums, S):
 
-    left = 0 # This vairable is starting the window.
-    current_sum = 0 # Running sum of elements in window.
-    min_length = float("inf") # Store the smallest valid subarray (the answer)
+#     left = 0 # This vairable is starting the window.
+#     current_sum = 0 # Running sum of elements in window.
+#     min_length = float("inf") # Store the smallest valid subarray (the answer)
 
+#     # Expand the window by moving 'right'
+#     for right in range(len(nums)):
+#         current_sum += nums[right] # This adds the current number to the window sum.
 
-    # Expand the window by moving 'right':
-
-    for right in range(len(nums)):
-        current_sum += nums[right] # This adds the current number to the window sum.
-
-        # While current sum is at least S, try to minimize the window.
-        while current_sum >= S:
-            min_length = min(min_length, right - left + 1) # Update min length
-
-
+#         # While current sum is at least S, try to minimize the window.
+#         while current_sum >= S:
+#             min_length = min(min_length, right - left + 1) # Update min length
+#             current_sum -= nums[left] #Remove leftmost element
+#             left += 1 #Move left pointer forward.
 
 
+#         #If no valid subarray found, return 0
+#     return min_length if min_length != float("inf") else 0 
 
 
+# print(min_subarray_length([2, 3, 1, 2, 4, 3], 7))  # Output: 2 ([4,3])
+# print(min_subarray_length([1, 2, 3, 4, 5], 11))  # Output: 3 ([3,4,5])
+# print(min_subarray_length([1, 2, 3, 4, 5], 100))  # Output: 0 (No valid subarray)
 
 
+# Problem 3 - Given an array of positive integers nums and an integer k, find the maximum product of any contiguous subarray of size k.
 
 
+def max_product_subarray(nums, k):
+
+    # Create variables for the sum of K and max_sum of the sliding window.
+    window_sum = sum(nums[:k])
+    max_sum = window_sum
+
+    # Create a for loop that loops over the array starting from the K position to the entire range of the array.
+    for i in range(k, len(nums)):
+        max_sum += nums[i] - nums[i - k]  # Update the max_sum based on the sliding window.
+        max_sum = max(max_sum, window_sum)  # Update the max_sum based on the sliding window.
+
+    return     #Return the max sum.
 
 
-
-
-
-
-
-print(min_subarray_length([2, 3, 1, 2, 4, 3], 7))  # Output: 2 ([4,3])
-print(min_subarray_length([1, 2, 3, 4, 5], 11))  # Output: 3 ([3,4,5])
-print(min_subarray_length([1, 2, 3, 4, 5], 100))  # Output: 0 (No valid subarray)
+print(max_product_subarray([1, 5, 2, 3, 6], 2))  # Output: 18 (subarray [3,6])
+print(max_product_subarray([4, 3, 2, 5, 8], 3))  # Output: 80 (subarray [2,5,8])
+print(max_product_subarray([2, 1, 1, 2, 4], 2))  # Output: 8 (subarray [2,4])
 
 
 
