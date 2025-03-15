@@ -108,52 +108,140 @@
 # print(min_sum_subarray([10, 20, 30, 40, 50], 3))  # Output: 60 (subarray [10,20,30])
 
 
-# ---- PSEDUOCODE PRACTICE --------
+# ---- PSEDUOCODE PRACTICE + SYNTAX WRITTING PRACTICE --------
 
 #----------P1
 
-# 1. First thing you want to do is declare variables for window_sum and max_sum, and solve the sum of "K".
+# 1. Declare variables:
+#    - window_product = product of first `k` numbers
+#    - max_product = window_product
 
-# 2. Next you want to do a for loop with "i" and in the range of "k" and the entire len of the array, because you already know the sum of "k" so you might as well start the for loop at "k".
+# 2. Start a for loop from `k` to `len(nums)`:
+#    - Remove the element that is leaving the window by **dividing it**.
+#    - Add the new element that is entering the window by **multiplying it**.
 
-#3. Next you are gonna want to create the sliding window which would make "window_sum" variable equal to the array "i" minus the array "i" - "k" which basically is subtracting off each int that is being taken off the sliding window each time it loops.
+# 3. If the removed element was `0`, recalculate the product from scratch.
 
-#4. Next you want to find the MAX sum of both max_sum and window_sum, so you do an equation for that.
+# 4. Update max_product to store the highest product found.
 
-#5 Return max sum to the function.
+# 5. Return max_product.
+
+from math import prod
+
+def max_product_subarray(nums, k):
+    window_product = prod(nums[:k])
+    max_product = window_product
+
+
+    for i in range(k, len(nums)):
+        window_product += nums[i] // nums[i - k] * k
+        max_product = max(max_product, window_product)
+
+
+    return max_product
+
+print(max_product_subarray([1, 5, 2, 3, 6], 2))  # Expected Output: 18 (subarray [3,6])
+print(max_product_subarray([4, 3, 2, 5, 8], 3))  # Expected Output: 80 (subarray [5,8])
+print(max_product_subarray([2, 1, 1, 2, 4], 2))  # Expected Output: 8 (subarray [4,2])
+
 
 #----------P2
 
-#1. To begin with we want to declare some variables, for example we want to declare left at 0, current_sum = 0, and min_length = float("inf").
+# 1. Declare variables:
+#    - left = 0
+#    - current_sum = 0
+#    - min_length = infinity (so we can track the smallest found)
 
-#2. We are going to create a for loop with "right" iterating over the array and it will be doing it for the entire length of the array.
+# 2. Start a for loop with `right` iterating through the array:
+#    - Add `nums[right]` to `current_sum`.
 
-#3. Inside the for loop we want to add the current sum to the window_sum.
+# 3. Use a **while loop** inside:
+#    - If `current_sum` is at least `S`:
+#      - Update `min_length` to store the smallest found window.
+#      - Subtract `nums[left]` from `current_sum` and move `left` forward (shrink window).
 
-#4. We create a for loop that is inside the if statement that moves the sliding window, which is calculating that if the current sum is less than 5 we continue the sliding window and if we reach a window where it is larger we assign it.
+# 4. After the loop, if `min_length` was never updated, return `0`.
 
-#----------P3 -- Share answer, I dont know this one.
+# 5. Otherwise, return `min_length`.
+
+def min_length_subarray(nums, S):
+    left = 0
+    current_sum = 0
+    min_length = float("inf")
+
+
+    for right in len(nums):
+        current_sum += nums[right]
+        
+        while current_sum < 5:
+            min_length = min(min_length, current_sum)
+            current_sum - nums[left] - nums[right - 1]
+
+
+print(min_length_subarray([2, 3, 1, 2, 4, 3], 7))  # Expected Output: 2 ([4,3])
+print(min_length_subarray([1, 2, 3, 4, 5], 11))  # Expected Output: 3 ([3,4,5])
+print(min_length_subarray([1, 2, 3, 4, 5], 100))  # Expected Output: 0 (No valid subarray)
+
+#----------P3
+
+# 1. Declare variables:
+#    - left = 0
+#    - char_count = empty dictionary to store character counts
+#    - max_length = 0
+
+# 2. Start a for loop with `right` iterating through the string:
+#    - Add `s[right]` to `char_count`.
+
+# 3. If `char_count` exceeds `k` distinct characters:
+#    - Shrink the window from the left:
+#      - Subtract `s[left]` from `char_count` (reduce count).
+#      - If count reaches `0`, remove it from dictionary.
+#      - Move `left` forward.
+
+# 4. Update `max_length` to store the longest substring found.
+
+# 5. Return `max_length`.
+
+
+
+
+
+
+
+
+
 
 
 
 # ---------P4
 
-#1. We are gonna start off by declaring variables and finding the current sum of K, which is the current window sum and assigning that to a variable of min_sum.
+# 1. Declare variables:
+#    - Compute `window_sum` as the sum of the first `k` numbers.
+#    - min_sum = window_sum
 
-#2. After that we want to create a for loop that goes through the entire array and length but starts at the range of "k". 
+# 2. Start a for loop from `k` to `len(nums)`:
+#    - Update `window_sum` by adding `nums[i]` and subtracting `nums[i - k]` (sliding window).
 
-#3. Inside the for loop we want to create a sliding window with the variable window_sum, which would be window_sum = nums[i] - nums[i - k].
+# 3. Update `min_sum` with the smallest sum found.
 
-#4. After we do the sliding window we then want to figure out the min of the values of window sum and min sum.
-
-
-#5. After that we want to retunr the min sum to the function.
-
+# 4. Return `min_sum`.
 
 # ---------P5
 
+# 1. Declare variables:
+#    - left = 0
+#    - char_count = empty dictionary to count character occurrences
+#    - max_length = 0
 
+# 2. Start a for loop with `right` iterating through the string:
+#    - Add `s[right]` to `char_count`.
 
+# 3. If `char_count` contains a letter that appears less than `k` times:
+#    - Shrink the window from `left` until all characters in the window appear at least `k` times.
+
+# 4. Update `max_length` to store the longest valid substring found.
+
+# 5. Return `max_length`.
 
 
 
