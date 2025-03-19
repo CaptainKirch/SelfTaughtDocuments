@@ -167,8 +167,102 @@
 
 #------- question 3
 
+# def longest_substring(s,k):
+#     char_count = {}
+#     window_start = 0
+#     max_length = 0
+
+
+#     for window_end in range(len(s)):
+#         right_char = s[window_end]
+#         char_count[right_char] = char_count.get(right_char, 0) + 1
+
+#         while len(char_count) > k:
+#             left_char = s[window_start]
+#             char_count[left_char] -= 1
+#             if char_count[left_char] == 0:
+#                 del char_count[left_char]
+#             window_start += 1
+
+#     max_length = max(max_length, window_end - window_start + 1)
+
+#     return max_length
+
+
+#------- question 4
+
+# def longest_subbstring(s,k):
+#     char_count = {}
+#     window_start = 0
+#     max_length = 0
+#     max_freq = 0
+
+#     for window_end in range(lens(s)):
+#         right_char -= s[window_end]
+#         char_count[right_char] = char_count.get(right_char, 0) + 1
+#         max_freq = max(max_freq, char_count[right_char])
+
+    
+#         while (window_end - window_start + 1) - max_freq > k:
+#             left_char = s[window_start]
+#             char_count[left_char] -= 1
+#             window_start += 1
+
+#     max_length = max(max_length, window_end - window_start + 1)
+
+#     return max_length
 
 
 
+# def max_subarray(nums,k):
+#     window_sum = sum(nums[:k])
+#     max_sum = window_sum
+
+#     for i in range(k, len(nums)):
+#         window_sum += nums[i] - nums[i - k]
+#         max_sum = max(max_sum, window_sum)
+
+#     return max_sum / k
+
+# print(max_subarray([1, 12, -5, -6, 50, 3], 4)) 
+ #-------------------------------------------------------------- 2
 
 
+
+#-------------------------------------------------------------------3 
+import math
+
+def longest_str(s):
+    char_count = {}
+    window_start = 0
+    max_length = 0
+
+    for window_end in range(len(s)):
+        right_char = s[window_end]
+        char_count[right_char] = char_count.get(right_char, 0) + 1
+
+        while char_count[right_char] > 1:
+            left_char = s[window_start]
+            char_count[left_char] -= 1
+
+            if char_count[left_char] == 0:
+                del left_char
+            window_start += 1
+
+        max_length = max(max_length, window_end - window_start + 1)
+
+    return max_length
+
+print(longest_str("abcabcbb"))
+Output: 3  # (substring "abc")
+
+
+#------------------------------------------------------------------- 4
+# def max_prod(nums,k):
+#     window_prod = sum(nums[:k])
+#     max_prod = window_prod
+#     my_list = []
+
+#     for i in range(k, len(nums)):
+#         window_prod += nums[i] - nums[i - k]
+#         my_list.append(window_prod * window_prod)
