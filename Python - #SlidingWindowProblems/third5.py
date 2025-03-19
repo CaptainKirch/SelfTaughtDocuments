@@ -76,56 +76,99 @@
 
 # 3️⃣ Smallest Subarray with Sum Greater Than X
 # Problem: Given an array of positive integers nums and an integer x, find the smallest contiguous subarray whose sum is greater than x.
+# import math
 
+# import math
 
+# def dynamic_smallest(arr,x):
+#     window_sum = 0
+#     min_length = math.inf
+#     window_start = 0
 
+#     for window_end in range(len(arr)):
+#         window_sum += arr[window_end]
 
+#         while window_sum >= x:
+#             min_length = min(min_length, window_end - window_start + 1)
+#             window_sum -= arr[window_start]
+#             window_start += 1
 
-# Input: nums = [2, 3, 1, 2, 4, 3], x = 7
-# Output: 2 (subarray [4,3] has sum > 7)
+#     return min_length if min_length != math.inf else 0
 
-
-
-
-
-
-
-
-
+# print(dynamic_smallest([2, 3, 1, 2, 4, 3], 7))
+# # Output: 2 (subarray [4,3] has sum > 7)
 
 
 # 4️⃣ Longest Substring with At Most K Distinct Characters
 # Problem: Given a string s and an integer k, find the length of the longest substring that contains at most k distinct characters.
 
+# import math
+
+# def distinct_substring(s,k):
+#     my_dict = {} # Dict to store frequencies.
+#     window_start = 0
+#     max_length = 0
+
+#     for window_end in range(len(s)):
+#         right_char = s[window_end]
+#         my_dict[right_char] = my_dict.get(right_char, 0) + 1
+
+#         while len(my_dict) > k:
+#             left_char = s[window_end]
+#             my_dict[left_char] -= 1
+#             if my_dict[left_char] == 0:
+#                 del my_dict[left_char]
+#             window_start += 1
+        
+#     max_length = max(max_length, window_end - window_start + 1)
+
+#     return max_length
+
+# print(distinct_substring("araaci",2))
+# # Output: 4 (longest substring "araa")
+
+
+
+
+#------- question 1
+
+
+# def sum_subbarray(nums,k):
+#     window_sum = sum(nums[:k])
+#     max_sum = window_sum
+
+#     for i in range(k, len(nums)):
+#         window_sum += nums[i] - nums[i - k]
+#         max_sum = max(max_sum, window_sum)
+
+#     return max_sum
+
+
+#------- question 2
+
+# import math
+
+# def smallest_subarray(nums,x):
+#     min_length = math.inf
+#     window_start = 0
+#     window_sum = 0 
+
+#     for window_end in range(len(nums)):
+#         window_sum += nums[window_end]
+
+
+#         while window_sum >= x:
+#             min_length = min(min_length, window_end - window_start + 1)
+#             window_sum -= nums[window_start]
+#             window_start += 1
+
+#         return min_length if min_length != math.inf else 0
+    
+
+#------- question 3
 
 
 
 
 
 
-# Input: s = "araaci", k = 2
-# Output: 4 (longest substring "araa")
-
-
-
-
-
-
-
-
-
-
-# 5️⃣ Longest Repeating Character Replacement
-# Problem: Given a string s and an integer k, find the length of the longest substring where you can replace up to k characters to make all characters the same.
-
-
-
-
-
-
-
-
-
-
-# Input: s = "AABABBA", k = 1
-# Output: 4 (Change "BABB" to "AAAA")
