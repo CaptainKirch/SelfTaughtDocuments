@@ -295,4 +295,27 @@
 # print(avg_subarray([1, 3, 2, 6, -1, 4, 1, 8, 2],5))
 
 
+# import math
 
+# def smallest_subarray(nums,S):
+#     min_length = math.inf
+#     window_start = 0
+#     window_sum = 0
+    
+#     for window_end in range(len(nums)):
+#         window_sum += nums[window_end]
+
+#         while window_sum >= S:
+#             window_start += nums[window_start]
+#             window_start += 1
+
+
+
+
+
+
+
+
+
+
+print(smallest_subarray([2, 1, 5, 2, 3, 2],7))
