@@ -230,31 +230,31 @@
 
 
 #-------------------------------------------------------------------3 
-import math
+# import math
 
-def longest_str(s):
-    char_count = {}
-    window_start = 0
-    max_length = 0
+# def longest_str(s):
+#     char_count = {}
+#     window_start = 0
+#     max_length = 0
 
-    for window_end in range(len(s)):
-        right_char = s[window_end]
-        char_count[right_char] = char_count.get(right_char, 0) + 1
+#     for window_end in range(len(s)):
+#         right_char = s[window_end]
+#         char_count[right_char] = char_count.get(right_char, 0) + 1
 
-        while char_count[right_char] > 1:
-            left_char = s[window_start]
-            char_count[left_char] -= 1
+#         while char_count[right_char] > 1:
+#             left_char = s[window_start]
+#             char_count[left_char] -= 1
 
-            if char_count[left_char] == 0:
-                del left_char
-            window_start += 1
+#             if char_count[left_char] == 0:
+#                 del left_char
+#             window_start += 1
 
-        max_length = max(max_length, window_end - window_start + 1)
+#         max_length = max(max_length, window_end - window_start + 1)
 
-    return max_length
+#     return max_length
 
-print(longest_str("abcabcbb"))
-Output: 3  # (substring "abc")
+# print(longest_str("abcabcbb"))
+# Output: 3  # (substring "abc")
 
 
 #------------------------------------------------------------------- 4
@@ -266,3 +266,33 @@ Output: 3  # (substring "abc")
 #     for i in range(k, len(nums)):
 #         window_prod += nums[i] - nums[i - k]
 #         my_list.append(window_prod * window_prod)
+
+# def max_subarray(nums,k):
+#     window_sum = sum(nums[:k])
+#     max_sum = window_sum
+
+
+#     for i in range(k, len(nums)):
+#         window_sum += nums[i] - nums[i - k]
+#         max_sum = max(max_sum, window_sum)
+
+#     return max_sum
+
+
+# print(max_subarray([2, 1, 5, 1, 3, 2],3))
+
+# def avg_subarray(nums,k):
+#     window_avg = sum(nums[:k])
+#     max_length = window_avg
+#     new_array = [window_avg / k]
+
+#     for i in range(k , len(nums)):
+#         window_avg += nums[i] - nums[i - k]
+#         max_length =  max(max_length, window_avg)
+#         new_array.append(window_avg / k)
+#     return new_array
+    
+# print(avg_subarray([1, 3, 2, 6, -1, 4, 1, 8, 2],5))
+
+
+
