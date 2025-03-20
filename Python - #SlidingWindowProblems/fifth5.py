@@ -81,18 +81,71 @@
 #     return max_length
 
 
+# Given an array of integers nums and an integer k, find the maximum sum of any contiguous subarray of size k.
+
+# def maximum_sum(nums,k):
+#     window_sum = sum(nums[:k])
+#     max_sum = window_sum
+
+#     for i in range(k, len(nums)):
+#         window_sum = window_sum + nums[i] - nums[i - k]
+    
+#         max_sum = max(max_sum, window_sum)
+
+#     return max_sum
+
+# print(maximum_sum([2, 1, 5, 1, 3, 2],3))
 
 
 
+# Given a string s, return the length of the longest substring without repeating characters.
 
 
+# def longest_substring(s):
+#     max_length = 0
+#     left = 0
+#     char_count = {}
+
+#     for right in range(len(s)):
+#         right_char = s[right]
+#         char_count[right_char] = char_count.get(right_char, 0) + 1
+
+#         while char_count[s[right]] > 1:
+#             char_count[s[left]] -= 1
+#             if char_count[s[left]] == 0:
+#                 del char_count[s[left]]  # Remove if count is zero
+#             left += 1 
+        
+#         max_length = max(max_length, right - left + 1)
+
+#     return max_length
+
+# print(longest_substring("abcabcbb"), "abc")
 
 
+# Given a string s and an integer k, return the length of the longest substring that contains at most k distinct characters.
+
+# def long_substring(s,k):
+#     max_length = 0
+#     left = 0
+#     char_count = {}
+
+#     for right in range(len(s)):
+#         right_char = s[right]
+#         char_count[right_char] = char_count.get(right_char, 0) + 1
 
 
+#     while len(char_count) > k:
+#         char_count[s[left]] -= 1
+#         if char_count[s[left]] == 0:
+#             del char_count[s[left]]
+#         left += 1
 
+#         max_length = max(max_length, right - left + 1)
 
+#     return max_length
 
+# print(long_substring("araaci",2))
 
 
 
