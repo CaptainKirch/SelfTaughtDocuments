@@ -113,7 +113,7 @@
 #         while char_count[s[right]] > 1:
 #             char_count[s[left]] -= 1
 #             if char_count[s[left]] == 0:
-#                 del char_count[s[left]]  # Remove if count is zero
+#                 del char_count[s[left]]
 #             left += 1 
         
 #         max_length = max(max_length, right - left + 1)
@@ -148,7 +148,45 @@
 # print(long_substring("araaci",2))
 
 
+# import math
 
+# def set_max(nums,k):
+#     left = 0
+#     nums_set = set()
+#     window_sum = 0
+#     max_sum = 0
+
+#     for right in range(len(nums)):
+#         while nums[right] in nums_set:
+#             nums_set.remove(nums[left])
+#             window_sum -= nums[left]
+#             left += 1
+
+#         nums_set.add(nums[right])
+#         window_sum += nums[right]
+
+
+#         if right - left + 1 == k:
+#             max_sum = max(max_sum, window_sum)
+#             nums_set.remove(nums[left])
+#             window_sum -= nums[left]
+#             left += 1
+
+
+#         return max_sum
+
+# def longest_substring(s):
+#     max_length = 0
+#     window_start = 0
+#     left = 0
+#     char_count = {}
+
+#     for right in range(len(s)):
+#         right_char += s[right]
+#         char_count[right_char] = char_count.get(right_char, 0) + 1
+
+
+#         while 
 
 
 
